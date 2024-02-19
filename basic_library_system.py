@@ -9,7 +9,7 @@ class Library:
         self.file.close()
 
     def list_books(self):
-        #list_books provides information about books in the library
+        # list_books provides information about books in the library
         self.file.seek(0)
         books = self.file.read().splitlines()
         if books:
@@ -18,7 +18,7 @@ class Library:
                 title, author, release_date, num_pages = book.split(',')
                 print(f"Title: {title}, Author: {author}, Release Date: {release_date}, Pages: {num_pages}")
         else:
-            print("There is any book in the library")
+            print("There is not any book in the library")
 
     def add_book(self):
         # add_book allows the user to add a new book to the library
@@ -50,12 +50,12 @@ class Library:
         else:
             print(f"Book not found: {title_to_remove}")
 
-#This is object name which call "lib" with "Library" class
+# This is object name which call "lib" with "Library" class
 lib = Library()
 
-#This is menu for user
+# This is menu for user
 while True:
-    print("\n*** MENU ***")
+    print("\n---- MENU ----")
     print("1) List Books")
     print("2) Add Book")
     print("3) Remove Book")
